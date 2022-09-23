@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue',Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.1s ease-in-out;
+}
+body
+{
+    background-color: #FFEEAD;
+}
+.header
+{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    max-height: 8em;
+    font-size: 1em;
+    color: aliceblue;
+    background-color: #FF9C54;
+    text-align: center;
+    position:absolute;
+    z-index: 1;
+}
+.container
+{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.container #find
+{
+    font-size: 30px;
+    user-select: none;
+}
+.container #find span
+{
+    font-size: 40px;
+    color: #D9534F;
+    font-weight: 600;
+}
+.box
+{
+    border-radius: 5px;
+}
+.box:hover
+{
+    transform: scale(1.2);
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    filter: hue-rotate(150deg);
+}
+
+.score-bar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    padding: 20px;
+    gap: 10px;
+}
+
+.score-bar #bar
+{
+    width: 90%;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #FDAF75;
+}
+
+.score-bar #bar #bar-filled
+{
+    background-color: #F24A72;
+    width: 3%;
+    height: 20px;
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.score-bar #score
+{
+    font-size: 45px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.msg
+{
+    opacity : 0;
+    color: #F24A72;
+    font-size: 35px;
+    font-weight: 600;
+    height: 20px;
+    user-select: none;
+}
+
+.win-container
+{
+    font-size: 25px;
+    background-color: #c3e5aecf;
+    position: absolute;
+    top : -200%;
+    transition: all 1s ease-in-out;
+    color: aliceblue;
+}
+.win-container i
+{
+    font-size : 80px;
+    color: #F24A72;
+}
+.win-container .info
+{
+    color: #F24A72;
+    font-size: 45px;
+}
+.btn
+{
+    width: 20%;
+    min-width: 100px;
+    background-color: #97DBAE;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) 
+{
+    .header
+    {
+        font-size: 20px;
+    }
+    #find span
+    {
+        font-size: 25px;
+    }
+     .msg
+     {
+        font-size: 25px;
+     } 
+     .win-container .info
+     {
+         font-size: 25px;
+     }
+}
